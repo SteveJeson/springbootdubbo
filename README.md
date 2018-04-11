@@ -1,6 +1,7 @@
 # SpringBoot项目(集成dubbo、zookeeper)
 ## 说明
 本项目是集成dubbo和zookeeper的一个HelloWorld项目，基于注解的配置形式，没有xml文件
+
 ## 环境
 #### 操作系统：ubuntu 16.04 LTS
 #### 开发工具：Idea
@@ -81,4 +82,57 @@
 #### 2、编译打包
 > `mvn package`
 #### 3、将打好的war包放入Tomcat的webapps的ROOT目录下，并解压
+#### 4、访问Tomcat配置的端口地址:http://localhost:8082/ ,进入管理主页，安装完毕
+![images](https://github.com/SteveJeson/springbootdubbo/blob/master/images/dubbo_admin.png)
+
+### 三、搭建SpringBoot项目，集成dubbo
+#### 说明：使用开发工具 Idea
+#### 新建SpringBoot项目
+> 1、使用Spring Initializr创建SpringBoot项目 <br>
+![images](https://github.com/SteveJeson/springbootdubbo/blob/master/images/spring.png)
+
+> 2、分别新建三个module，springboot-dubbo-server(服务端),springboot-dubbo-client(客户端),springboot-dubbo-api(共享接口) <br>
+![images](https://github.com/SteveJeson/springbootdubbo/blob/master/images/projectree.png)
+
+> 3、pom.xml添加dubbo依赖包，参考具体文件
+
+> 4、在api项目定义接口
+
+> 5、在server项目里实现接口，给实现类添加注解Component和Service：
+
+> `@Component @Service(version = "1.0.0") `
+
+> 6、在client项目里消费接口，建立controller，将要调用的服务注入进来，添加Refrence注解：
+
+> `@Reference(version="1.0.0") private DemoService demoService;`
+
+> 7、server服务端application.properties配置
+
+> `#dubbo提供者的别名，只是个标识`<br>
+> `spring.dubbo.application.name=springboot-dubbo-server`
+
+> `#zk地址`<br>
+> `spring.dubbo.registry.address=zookeeper://127.0.0.1:2181`
+
+> `#dubbo协议`<br>
+> `spring.dubbo.protocol.name=dubbo`
+
+> `#duboo端口号`<br>
+> `spring.dubbo.protocol.port=20880`
+
+> `#这是你要发布到dubbo的接口所在包位置`<br>
+> `spring.dubbo.scan=com.zdzc.springbootdubboserver.service.impl`
+
+> `服务端口号`<br>
+> `server.port=8088`
+
+> 8、client客户端application.properties配置,同服务端
+
+> 9、分别启动服务端和客户端项目，启动完毕后，在dubbo管理平台会看到有相关统计<br>
+![images](https://github.com/SteveJeson/springbootdubbo/blob/master/images/service.png)
+
+
+
+
+
  
