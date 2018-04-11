@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springboot-dubbo-api" />
+        <module name="springboot-dubbo-client" />
+        <module name="springboot-dubbo-server" />
+        <module name="springbootdubbo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springboot-dubbo-api" target="1.8" />
+      <module name="springboot-dubbo-client" target="1.8" />
+      <module name="springboot-dubbo-server" target="1.8" />
+      <module name="springbootdubbo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
