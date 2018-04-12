@@ -18,7 +18,7 @@ public class HelloControlller {
 
     @RequestMapping("/hello")
     public String hello(){
-        return "Welcome to springboot dubbo client!";
+        return "Welcome to springboot dubbo!";
     }
 
 }
