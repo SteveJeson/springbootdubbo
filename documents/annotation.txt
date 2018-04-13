@@ -1,0 +1,31 @@
+@Service 服务提供者常用配置dd
+常用 @Service 配置的如下
+
+version 版本
+
+group 分组
+
+provider 提供者
+
+protocol 服务协议
+
+monitor 服务监控
+
+registry 服务注册
+
+============================================================================
+
+@Reference 服务消费者常用配置
+常用 @Reference 配置的如下
+
+version 版本
+
+group 分组
+
+timeout 消费者调用提供者的超时时间
+
+consumer 服务消费者
+
+monitor 服务监控
+
+registry 服务注册
