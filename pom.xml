@@ -26,8 +26,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
         <org.apache.zookeeper.version>3.5.1-alpha</org.apache.zookeeper.version>
+        <org.slf4j.version>1.7.21</org.slf4j.version>
+        <logging.version>1.2</logging.version>
     </properties>
 
     <dependencyManagement>
@@ -46,6 +47,7 @@
                 <version>0.0.1</version>
             </dependency>
 
+            <!--dubbo-->
             <dependency>
                 <groupId>io.dubbo.springboot</groupId>
                 <artifactId>spring-boot-starter-dubbo</artifactId>
@@ -73,19 +75,19 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>1.7.21</version>
+                <version>${org.slf4j.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
-                <version>1.7.21</version>
+                <version>${org.slf4j.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>commons-logging</groupId>
                 <artifactId>commons-logging</artifactId>
-                <version>1.2</version>
+                <version>${logging.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
