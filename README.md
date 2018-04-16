@@ -1,6 +1,6 @@
 # SpringBoot项目(集成dubbo、zookeeper)
 ## 说明
-本项目是集成dubbo和zookeeper的一个HelloWorld项目，基于注解的配置形式，没有xml文件
+本项目是集成dubbo和zookeeper的一个练习项目，基于注解的配置形式，没有xml文件
 
 ## 环境
 #### 操作系统：ubuntu 16.04 LTS
