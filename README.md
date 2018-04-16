@@ -121,7 +121,7 @@
 > `spring.dubbo.protocol.port=20880`
 
 > `#这是你要发布到dubbo的接口所在包位置`<br>
-> `spring.dubbo.scan=com.zdzc.springbootdubboserver.service.impl`
+> `spring.dubbo.scan=com.zdzc.base.service.impl`
 
 > `服务端口号`<br>
 > `server.port=8088`

@@ -1,4 +1,4 @@
-package com.zdzc.springbootdubboapi;
+package com.zdzc.base;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

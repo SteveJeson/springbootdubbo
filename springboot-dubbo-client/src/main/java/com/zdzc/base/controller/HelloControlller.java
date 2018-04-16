@@ -1,7 +1,7 @@
-package com.zdzc.springbootdubboclient.controller;
+package com.zdzc.base.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.zdzc.springbootdubboapi.service.DemoService;
+import com.zdzc.base.service.DemoService;
 import org.springframework.web.bind.annotation.*;
 
 

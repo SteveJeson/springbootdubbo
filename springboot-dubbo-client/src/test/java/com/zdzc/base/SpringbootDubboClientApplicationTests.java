@@ -1,4 +1,4 @@
-package com.zdzc.springbootdubboclient;
+package com.zdzc.base;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
