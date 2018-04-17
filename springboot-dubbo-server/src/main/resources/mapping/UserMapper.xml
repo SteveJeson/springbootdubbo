@@ -16,6 +16,11 @@
     from t_user
     where user_id = #{userId,jdbcType=INTEGER}
   </select>
+  <select id="selectAllUsers" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_user
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_user
     where user_id = #{userId,jdbcType=INTEGER}
@@ -79,4 +84,5 @@
       phone = #{phone,jdbcType=VARCHAR}
     where user_id = #{userId,jdbcType=INTEGER}
   </update>
+
 </mapper>
